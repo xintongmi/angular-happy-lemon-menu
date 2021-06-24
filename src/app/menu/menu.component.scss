@@ -1,0 +1,48 @@
+input {
+  padding: 0.5rem;
+}
+h2 {
+  background-image: url("https://popmenucloud.com/cdn-cgi/image/width=5760,height=5760,fit=scale-down,format=auto,quality=60/eqruvkhi/3c3f39fc-4540-4f69-b131-11cca53ab36c");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-wrap: wrap;
+  height: 320px;
+}
+.drinks {
+  display: flex;
+  flex-direction: row;
+  border-radius: 4px;
+  margin: 12px;
+  background-color: #eee;
+  width: 300px;
+  height: fit-content;
+  justify-content: space-between;
+}
+.drinks .id {
+  background-color: #405061;
+  border-radius: 4px 0px 0px 4px;
+  color: white;
+  width: 28px;
+  padding: 8px 4px 8px 4px;
+  text-align: center;
+  font-weight: bold;
+}
+.drinks .name {
+  padding: 8px 4px 8px 12px;
+  width: 200px;
+}
+.drinks .price {
+  background-color: bisque;
+  border-radius: 8px 4px;
+  width: 28px;
+  text-align: center;
+  padding: 4px 4px 4px 4px;
+  align-self: flex-end;
+  font-style: italic;
+}
