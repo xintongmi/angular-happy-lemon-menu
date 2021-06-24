@@ -9,6 +9,7 @@ import { MENU } from '../mock-menu';
 })
 export class MenuComponent implements OnInit {
   drinks = MENU;
+
   constructor() {}
 
   ngOnInit(): void {}

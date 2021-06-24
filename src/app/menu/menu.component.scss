@@ -2,10 +2,16 @@ input {
   padding: 0.5rem;
 }
 h2 {
+  height: 500px;
   background-image: url("https://popmenucloud.com/cdn-cgi/image/width=5760,height=5760,fit=scale-down,format=auto,quality=60/eqruvkhi/3c3f39fc-4540-4f69-b131-11cca53ab36c");
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover;
+  border-radius: 8px;
+  text-align: center;
+  margin: 16px 8px 8px 8px;
+  padding-top: 200px;
+  color: white;
+  font: 60px Comic Sans MS, Comic Sans, cursive;
 }
 .menu {
   display: flex;
