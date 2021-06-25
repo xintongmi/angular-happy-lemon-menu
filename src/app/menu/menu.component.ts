@@ -9,6 +9,11 @@ import { MENU } from '../mock-menu';
 })
 export class MenuComponent implements OnInit {
   drinks = MENU;
+  selectedDrink?: Drink;
+
+  onSelect(drink: Drink) {
+    this.selectedDrink = drink;
+  }
 
   constructor() {}
 

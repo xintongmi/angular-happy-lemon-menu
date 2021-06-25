@@ -15,6 +15,7 @@ h2 {
 }
 .menu {
   display: flex;
+  position: relative;
   flex-direction: column;
   width: 100%;
   flex-wrap: wrap;
@@ -22,6 +23,7 @@ h2 {
 }
 .drinks {
   display: flex;
+  position: relative;
   flex-direction: row;
   border-radius: 4px;
   margin: 12px;
@@ -29,6 +31,11 @@ h2 {
   width: 300px;
   height: fit-content;
   justify-content: space-between;
+  cursor: pointer;
+}
+.drinks:hover {
+  margin-left: 8px;
+  margin-right: -8px;
 }
 .drinks .id {
   background-color: #405061;
@@ -38,6 +45,9 @@ h2 {
   padding: 8px 4px 8px 4px;
   text-align: center;
   font-weight: bold;
+}
+.menu .selected.drinks {
+  background-color: #5c7396;
 }
 .drinks .name {
   padding: 8px 4px 8px 12px;
