@@ -2,4 +2,5 @@
   src="https://cdn.doordash.com/media/restaurant/cover/HappyLemonRooseveltAve_13335_Flushing_NY.png"
   class="logo"
 />
-<app-menu class="app-menu"></app-menu>
+<app-menu class="app-menu" (drinkSelect)="onDrinkSelect($event)"></app-menu>
+<app-drink-detail [drink]="selectedDrink"></app-drink-detail>

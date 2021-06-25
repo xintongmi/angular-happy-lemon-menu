@@ -1,0 +1,12 @@
+<section *ngIf="drink">
+  <h3>{{ drink.name | uppercase }} Details</h3>
+  <div>id: {{ drink.id }}</div>
+  <div>
+    <label for="name"></label>
+    <input id="name" [(ngModel)]="drink.name" placeholder="drink.name" />
+  </div>
+  <div>
+    <label for="price">$: </label>
+    <input id="price" [(ngModel)]="drink.price" placeholder="drink.price" />
+  </div>
+</section>
