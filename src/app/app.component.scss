@@ -16,18 +16,19 @@ nav {
     text-decoration: none;
     margin: 8px;
     padding: 4px;
-    background-color: #afc4e5;
+    background-color: #72839a;
     border-radius: 4px;
     width: 160px;
     height: fit-content;
     font-size: 20px;
-    color: black;
+    color: white;
     font-weight: light;
     text-align: center;
 
     &:hover {
-      background-color: #5d58a5;
+      background-color: #637493;
       color: white;
+      margin-top: 4px;
     }
   }
 }

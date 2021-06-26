@@ -7,10 +7,17 @@ import { MenuComponent } from './menu/menu.component';
 import { DrinkDetailComponent } from './drink-detail/drink-detail.component';
 import { MessageComponent } from './message/message.component';
 import { HomepageComponent } from './homepage/homepage.component';
-import { RecommendationComponent } from './recommendation/recommendation.component';
+import { reviewsComponent } from './reviews/reviews.component';
 
 @NgModule({
-  declarations: [AppComponent, MenuComponent, DrinkDetailComponent, MessageComponent, HomepageComponent, RecommendationComponent],
+  declarations: [
+    AppComponent,
+    MenuComponent,
+    DrinkDetailComponent,
+    MessageComponent,
+    HomepageComponent,
+    reviewsComponent,
+  ],
   imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],

@@ -13,11 +13,11 @@ input {
   background-image: url("https://popmenucloud.com/cdn-cgi/image/width=5760,height=5760,fit=scale-down,format=auto,quality=60/eqruvkhi/3c3f39fc-4540-4f69-b131-11cca53ab36c");
   background-repeat: no-repeat;
   background-size: cover;
+  height: 320px;
   border-radius: 8px;
   text-align: center;
   margin: 16px 8px 8px 8px;
   padding-top: 100px;
-  flex: auto;
   color: white;
   font: 60px Comic Sans MS, Comic Sans, cursive;
 }
@@ -66,11 +66,12 @@ input {
   width: 200px;
 }
 .drinks .price {
-  background-color: bisque;
-  border-radius: 8px 4px;
-  width: 28px;
+  background-color: #ffd80a;
+  border-radius: 10% 50%/50%;
+  width: 24px;
   text-align: center;
   padding: 4px 4px 4px 4px;
   align-self: flex-end;
   font-style: italic;
+  font-size: 80%;
 }
