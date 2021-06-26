@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Drink } from './drink';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +7,4 @@ import { Drink } from './drink';
 })
 export class AppComponent {
   title = 'Happy Lemon';
-  selectedDrink?: Drink;
-  onDrinkSelect(drink: Drink) {
-    this.selectedDrink = drink;
-  }
 }

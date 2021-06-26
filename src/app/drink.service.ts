@@ -14,4 +14,9 @@ export class DrinkService {
     this.messageService.add('MessageService: fetched drinks');
     return of(MENU);
   }
+
+  getDrink(id: string): Observable<Drink> {
+    const drink = MENU.find((d) => d.id === id)!;
+    return of(drink);
+  }
 }

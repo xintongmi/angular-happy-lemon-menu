@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Drink } from '../drink';
+import { DrinkService } from '../drink.service';
 
 @Component({
   selector: 'app-drink-detail',
@@ -7,8 +9,19 @@ import { Drink } from '../drink';
   styleUrls: ['./drink-detail.component.scss'],
 })
 export class DrinkDetailComponent implements OnInit {
-  @Input() drink?: Drink;
-  constructor() {}
+  drink?: Drink;
 
-  ngOnInit(): void {}
+  constructor(
+    private drinkService: DrinkService,
+    private route: ActivatedRoute
+  ) {}
+
+  ngOnInit(): void {
+    this.getDrink();
+  }
+
+  getDrink() {
+    const id = this.route.snapshot.paramMap.get('id')!;
+    this.drinkService.getDrink(id).subscribe((drink) => (this.drink = drink));
+  }
 }

@@ -9,7 +9,26 @@
   height: 80px;
   object-fit: contain;
 }
+nav {
+  display: flex;
+  flex-direction: row;
 
-.app-menu {
-  flex: auto;
+  a {
+    text-decoration: none;
+    margin: 8px;
+    padding: 4px;
+    background-color: #afc4e5;
+    border-radius: 4px;
+    width: 160px;
+    height: fit-content;
+    font-size: 20px;
+    color: black;
+    font-weight: light;
+    text-align: center;
+
+    &:hover {
+      background-color: #5d58a5;
+      color: white;
+    }
+  }
 }
