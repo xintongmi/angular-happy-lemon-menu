@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
-import { DrinkDetailComponent } from './drink-detail/drink-detail.component';
+import { DrinkOrderComponent } from './drink-order/drink-order.component';
 import { MessageComponent } from './message/message.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { reviewsComponent } from './reviews/reviews.component';
@@ -13,7 +13,7 @@ import { reviewsComponent } from './reviews/reviews.component';
   declarations: [
     AppComponent,
     MenuComponent,
-    DrinkDetailComponent,
+    DrinkOrderComponent,
     MessageComponent,
     HomepageComponent,
     reviewsComponent,

@@ -4,12 +4,13 @@ import { Drink } from '../drink';
 import { DrinkService } from '../drink.service';
 
 @Component({
-  selector: 'app-drink-detail',
-  templateUrl: './drink-detail.component.html',
-  styleUrls: ['./drink-detail.component.scss'],
+  selector: 'app-drink-order',
+  templateUrl: './drink-order.component.html',
+  styleUrls: ['./drink-order.component.scss'],
 })
-export class DrinkDetailComponent implements OnInit {
+export class DrinkOrderComponent implements OnInit {
   drink?: Drink;
+  tips?: number;
 
   constructor(
     private drinkService: DrinkService,

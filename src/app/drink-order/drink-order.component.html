@@ -1,0 +1,14 @@
+<section *ngIf="drink" class="drinkOrder-container">
+  <h3>{{ drink.name | uppercase }}</h3>
+  <div>id: {{ drink.id }}</div>
+  <div>calories: {{ drink.calorie }}</div>
+  <div>price: {{ drink.price }}</div>
+  <div>Ingredients: {{ drink.ingredients }}</div>
+
+  <div>
+    <label for="tips">Tips</label>
+    <input id="tips" [(ngModel)]="tips" type="number" placeholder="1" />$
+  </div>
+  <div>Total price:</div>
+  <div></div>
+</section>

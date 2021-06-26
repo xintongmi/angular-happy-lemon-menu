@@ -5,7 +5,7 @@
     class="drinks"
     (click)="onSelect(drink)"
     [class.selected]="drink === selectedDrink"
-    routerLink="/detail/{{ drink.id }}"
+    routerLink="/order/{{ drink.id }}"
   >
     <div class="id">{{ drink.id }}</div>
     <div class="name">{{ drink.name }}</div>
