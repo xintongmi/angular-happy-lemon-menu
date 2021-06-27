@@ -8,6 +8,7 @@ import { DrinkOrderComponent } from './drink-order/drink-order.component';
 import { MessageComponent } from './message/message.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { reviewsComponent } from './reviews/reviews.component';
+import { ToppingsComponent } from './toppings/toppings.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { reviewsComponent } from './reviews/reviews.component';
     MessageComponent,
     HomepageComponent,
     reviewsComponent,
+    ToppingsComponent,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [],

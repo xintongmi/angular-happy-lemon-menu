@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { Drink } from './drink';
+import { Drink, Topping } from './drink';
 import { MessageService } from './message.service';
 import { MENU } from './mock-menu';
+import { TOPPINGS } from './mock-toppings';
 
 @Injectable({
   providedIn: 'root',
@@ -18,5 +19,9 @@ export class DrinkService {
   getDrink(id: string): Observable<Drink> {
     const drink = MENU.find((d) => d.id === id)!;
     return of(drink);
+  }
+
+  getToppings(): Observable<Topping[]> {
+    return of(TOPPINGS);
   }
 }
