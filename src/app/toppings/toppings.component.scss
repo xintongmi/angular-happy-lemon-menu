@@ -1,0 +1,33 @@
+.topping-container {
+  display: flex;
+  flex-direction: column;
+
+  .topping {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 4px;
+    background-color: #eee;
+    margin: 12px;
+    padding: 8px 0 8px 4px;
+
+    .name {
+      width: 240px;
+    }
+
+    .calorie {
+      font-style: italic;
+    }
+    .price {
+      background-color: #ffd80a;
+      border-radius: 10% 50%/50%;
+      width: 24px;
+      text-align: center;
+      padding: 4px 4px 4px 4px;
+      margin-bottom: -8px;
+      align-self: flex-end;
+      font-style: italic;
+      font-size: 80%;
+    }
+  }
+}

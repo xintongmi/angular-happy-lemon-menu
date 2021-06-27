@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Topping } from '../drink';
 import { DrinkService } from '../drink.service';
 
@@ -9,14 +9,26 @@ import { DrinkService } from '../drink.service';
 })
 export class ToppingsComponent implements OnInit {
   toppings?: Topping[];
+  toppingsQuantity: number[] = [];
+  @Output() toppingsAdd = new EventEmitter<number[]>();
+
   constructor(private drinkService: DrinkService) {}
 
   ngOnInit(): void {
     this.getToppings();
   }
+
   getToppings() {
-    this.drinkService
-      .getToppings()
-      .subscribe((toppings) => (this.toppings = toppings));
+    this.drinkService.getToppings().subscribe((toppings) => {
+      this.toppings = toppings;
+      this.toppingsQuantity = [];
+      for (let i = 0; i < toppings.length; i++) {
+        this.toppingsQuantity.push(0);
+      }
+    });
+  }
+
+  addToppings(toppingsQuantity: number[]) {
+    this.toppingsAdd.next(toppingsQuantity);
   }
 }

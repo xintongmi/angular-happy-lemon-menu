@@ -1,8 +1,15 @@
-<p>toppings works!</p>
 <section class="topping-container">
-  <div *ngFor="let topping of toppings">
-    <div>{{ topping.name }}</div>
-    <div>{{ topping.calorie }}</div>
-    <div>{{ topping.price }}</div>
+  <div *ngFor="let topping of toppings; let i = index" class="topping">
+    <div class="name">{{ topping.name }}</div>
+    <div class="calorie">{{ topping.calorie }}kcal</div>
+    <div class="price">${{ topping.price }}</div>
+    <label for="add-toppings"></label>
+    <input
+      class="add-toppings"
+      [(ngModel)]="toppingsQuantity[i]"
+      type="number"
+      placeholder="0"
+    />
   </div>
+  <button class="submit" (click)="addToppings(toppingsQuantity)">Submit</button>
 </section>
