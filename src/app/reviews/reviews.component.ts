@@ -14,9 +14,9 @@ export class reviewsComponent implements OnInit {
   ngOnInit(): void {}
 
   addStoreReview() {
-    // this.reviews = this.reviewService.reviews;
     if (this.pendingReview) {
       this.reviewService.addStoreReview(this.pendingReview);
     }
+    this.pendingReview = '';
   }
 }

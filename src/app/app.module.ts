@@ -5,8 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { DrinkOrderComponent } from './drink-order/drink-order.component';
-import { MessageComponent } from './message/message.component';
-import { HomepageComponent } from './homepage/homepage.component';
 import { reviewsComponent } from './reviews/reviews.component';
 import { ToppingsComponent } from './toppings/toppings.component';
 
@@ -15,8 +13,6 @@ import { ToppingsComponent } from './toppings/toppings.component';
     AppComponent,
     MenuComponent,
     DrinkOrderComponent,
-    MessageComponent,
-    HomepageComponent,
     reviewsComponent,
     ToppingsComponent,
   ],
