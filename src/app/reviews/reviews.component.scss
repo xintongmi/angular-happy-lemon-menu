@@ -14,39 +14,48 @@ input {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
+  width: 100%;
   border-radius: 8px;
-  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 16px 8px 8px 8px;
   padding-top: 100px;
   color: white;
   padding: 32px 12px 8px 12px;
 
-  .review-title {
-    position: relative;
-    text-align: center;
-    width: 100%;
-    height: 60px;
-    font-size: 60px;
-  }
-
   .review-container {
-    font: 16px Snell Roundhand, cursive;
-    padding: 20px 4px 8px 4px;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+
+    .h2 {
+      position: relative;
+      max-width: 800px;
+      text-align: center;
+      width: 100%;
+      height: 60px;
+      font-size: 60px;
+      color: white;
+    }
 
     .review {
       padding: 4px;
+      font: 16px Snell Roundhand, cursive;
+      padding: 20px 4px 8px 4px;
+      text-align: justify;
     }
-  }
 
-  .input-area {
-    display: flex;
-    flex-direction: column;
-    color: black;
-    font-style: italic;
+    .input-area {
+      display: flex;
+      flex-direction: column;
+      font-style: italic;
+      color: black;
 
-    .submit {
-      margin: 4px;
-      width: fit-content;
+      .submit {
+        margin: 4px;
+        width: fit-content;
+      }
     }
   }
 }

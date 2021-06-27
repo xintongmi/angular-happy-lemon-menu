@@ -29,6 +29,9 @@ export class ToppingsComponent implements OnInit {
   }
 
   addToppings(toppingsQuantity: number[]) {
-    this.toppingsAdd.next(toppingsQuantity);
+    // To ensure the excution of addToppings later than ngModel update the value of toppingsQuantity[i]
+    setTimeout(() => {
+      this.toppingsAdd.next(toppingsQuantity);
+    });
   }
 }

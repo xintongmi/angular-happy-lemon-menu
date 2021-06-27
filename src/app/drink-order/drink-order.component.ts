@@ -12,6 +12,7 @@ export class DrinkOrderComponent implements OnInit {
   drink!: Drink;
   tips = 0;
   toppings: Topping[] = [];
+  toppingsQuantity: number[] = [];
   totalPrice = 0;
 
   constructor(
@@ -26,7 +27,10 @@ export class DrinkOrderComponent implements OnInit {
 
   getDrink() {
     const id = this.route.snapshot.paramMap.get('id')!;
-    this.drinkService.getDrink(id).subscribe((drink) => (this.drink = drink));
+    this.drinkService.getDrink(id).subscribe((drink) => {
+      this.drink = drink;
+      this.totalPrice = drink.price;
+    });
   }
 
   getToppings() {
@@ -35,11 +39,11 @@ export class DrinkOrderComponent implements OnInit {
     });
   }
 
-  updateTotalPrice(toppingsQuantity: number[]) {
-    let topingPrice = 0;
-    for (let i = 0; i < toppingsQuantity.length; i++) {
-      topingPrice += toppingsQuantity[i] * this.toppings[i].price;
+  updateTotalPrice() {
+    let toppingPrice = 0;
+    for (let i = 0; i < this.toppingsQuantity.length; i++) {
+      toppingPrice += this.toppingsQuantity[i] * this.toppings[i].price;
     }
-    this.totalPrice = topingPrice + this.tips + this.drink.price;
+    this.totalPrice = toppingPrice + this.tips + this.drink.price;
   }
 }

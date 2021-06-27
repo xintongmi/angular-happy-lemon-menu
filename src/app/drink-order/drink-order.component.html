@@ -7,8 +7,16 @@
 
   <div>
     <label for="tips">Tips</label>
-    <input id="tips" [(ngModel)]="tips" type="number" placeholder="1" />$
+    <input
+      id="tips"
+      [(ngModel)]="tips"
+      type="number"
+      placeholder="1"
+      (change)="updateTotalPrice()"
+    />$
   </div>
-  <div>Total price: {{ totalPrice }}</div>
+  <div class="totalPrice">Total price: {{ totalPrice }}</div>
 </section>
-<app-toppings (toppingsAdd)="updateTotalPrice($event)"></app-toppings>
+<app-toppings
+  (toppingsAdd)="toppingsQuantity = $event; updateTotalPrice()"
+></app-toppings>

@@ -1,6 +1,6 @@
 <div class="reviews">
-  <div class="review-title">Reviews</div>
   <div class="review-container">
+    <h2>Reviews</h2>
     <div class="review">
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
       tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -22,17 +22,17 @@
     <div *ngFor="let review of reviewService.reviews" class="review">
       " {{ review }} "
     </div>
-  </div>
-  <div class="input-area">
-    <label for="myReview">Please review us!</label>
-    <textarea
-      id="myReview"
-      [(ngModel)]="pendingReview"
-      placeholder="Please type here!"
-      rows="10"
-      cols="80"
-    ></textarea>
-    <button class="submit" (click)="addStoreReview()">Submit</button>
-    <div>Your opinon matters!</div>
+    <div class="input-area">
+      <label for="myReview">Please review us!</label>
+      <textarea
+        id="myReview"
+        [(ngModel)]="pendingReview"
+        placeholder="Please type here!"
+        rows="10"
+        cols="80"
+      ></textarea>
+      <button class="submit" (click)="addStoreReview()">Submit</button>
+      <div>Your opinon matters!</div>
+    </div>
   </div>
 </div>

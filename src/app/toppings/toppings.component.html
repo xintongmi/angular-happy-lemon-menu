@@ -9,7 +9,7 @@
       [(ngModel)]="toppingsQuantity[i]"
       type="number"
       placeholder="0"
+      (change)="addToppings(toppingsQuantity)"
     />
   </div>
-  <button class="submit" (click)="addToppings(toppingsQuantity)">Submit</button>
 </section>
