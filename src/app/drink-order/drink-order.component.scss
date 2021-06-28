@@ -4,10 +4,17 @@
   margin: 8px;
   height: 240px;
   justify-content: space-between;
-
+  .input {
+    margin-left: 8px;
+    width: 60px;
+  }
   .totalPrice {
     font-size: 150%;
     font-weight: bold;
     margin: 16px 0 12px 0;
+  }
+  .dollar-sign {
+    font-size: 80%;
+    margin-left: 4px;
   }
 }

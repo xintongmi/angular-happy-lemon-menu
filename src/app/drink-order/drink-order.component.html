@@ -10,12 +10,15 @@
     <input
       id="tips"
       [(ngModel)]="tips"
+      class="input"
       type="number"
       placeholder="1"
       (change)="updateTotalPrice()"
-    />$
+    /><span class="dollar-sign">$</span>
   </div>
-  <div class="totalPrice">Total price: {{ totalPrice }}</div>
+  <div class="totalPrice">
+    Total price: {{ totalPrice }}<span class="dollar-sign">$</span>
+  </div>
 </section>
 <app-toppings
   (toppingsAdd)="toppingsQuantity = $event; updateTotalPrice()"
